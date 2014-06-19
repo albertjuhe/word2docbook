@@ -1,0 +1,74 @@
+<p:pipeline xmlns:p="http://www.w3.org/ns/xproc" name="word2docbook" version="1.0">
+
+    <p:xslt name="stepWordXml">
+        <p:input port="source"/>
+        <p:input port="stylesheet">
+            <p:document href="../xsl/word2docbook.xsl"/>
+        </p:input>
+        <p:input port="parameters">
+            <p:pipe step="word2docbook" port="parameters"/>
+        </p:input>
+    </p:xslt>
+   
+    <p:xslt name="stepLists">
+        <p:input port="source">
+            <p:pipe port="result" step="stepWordXml"/>
+        </p:input>
+        <p:input port="stylesheet">
+            <p:document href="../xsl/creating_itemizedlists.xsl"/>
+        </p:input>
+        <p:input port="parameters">
+            <p:empty/>
+        </p:input>
+    </p:xslt>   
+    
+    <p:xslt name="stepClean">
+        <p:input port="source">
+            <p:pipe port="result" step="stepLists"/>
+        </p:input>
+        <p:input port="stylesheet">
+            <p:document href="../xsl/neteja.xsl"/>
+        </p:input>
+        <p:input port="parameters">
+            <p:empty/>
+        </p:input>
+    </p:xslt>
+
+    <p:xslt name="stepStructureDocbook">
+        <p:input port="source">
+            <p:pipe port="result" step="stepClean"/>
+        </p:input>
+        <p:input port="stylesheet">
+            <p:document href="../xsl/estructura.xsl"/>
+        </p:input>
+        <p:input port="parameters">
+            <p:empty/>
+        </p:input>
+    </p:xslt>
+  
+
+    <p:xslt name="stepNormalize">
+        <p:input port="source">
+            <p:pipe port="result" step="stepStructureDocbook"/>
+        </p:input>
+        <p:input port="stylesheet">
+            <p:document href="../xsl/normalitzar.xsl"/>
+        </p:input>
+        <p:input port="parameters">
+            <p:empty/>
+        </p:input>
+    </p:xslt>   
+   
+    <p:xslt name="stepPatterns">
+        <p:input port="source">
+            <p:pipe port="result" step="stepNormalize"/>
+        </p:input>
+        <p:input port="stylesheet">
+            <p:document href="../xsl/patrons_correccio.xsl"/>
+        </p:input>
+        <p:input port="parameters">
+            <p:empty/>
+        </p:input>
+    </p:xslt>   
+
+</p:pipeline>

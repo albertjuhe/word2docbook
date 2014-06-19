@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+   word: Word styles to find
+   tag: replace word style for the tag content
+   TODO:group: merge adjacent elements  
+-->
+<t:template xmlns:t="http://www.omaonk.com/schema">
+   <t:style word="heading 1" tag="chapter"/>
+   <t:style word="heading 2" tag="sect1"/>
+   <t:style word="heading 3" tag="sect2"/>
+   <t:style word="tip" tag="tip"/>
+   <t:style word="List Paragraph" tag="listitem"/>
+   <t:style word="heading 4" tag="sect3"/>
+   <t:style word="heading 5" tag="sect4"/>
+   <t:style word="heading 6" tag="example"/>
+   <t:style word="autor" tag="autor"/>
+   <t:style word="Quote" tag="blockquote"/>
+   <t:style word="Intense Quote" tag="important"/>
+   <t:style word="Title" tag="title"/>
+   <t:style word="curriculum" tag="personblurb"/>
+   <t:style word="footnote" tag="footnote"/>
+   
+</t:template>

@@ -1,0 +1,3 @@
+#!/bin/sh
+java -Xmx1024m -jar C:\Projectes\word2docbook\lib/calabash.jar $*
+    
