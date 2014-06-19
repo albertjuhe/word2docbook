@@ -3,6 +3,8 @@ word2docbook
 
 Convert Word documents (docx) to XML docbook, usign XSLT 2.0 with [saxonhe9-2-1-5j](http://saxon.sourceforge.net/) and XMLPipeline with [calumet](https://community.emc.com/docs/DOC-4242).
 
+This converter makes the transformation based on a file which makes a relationship between word styles and docbook tags.
+
 ##Installation
 
 Download de code.
@@ -11,7 +13,7 @@ Install java 1.6.
 ##Usage
 
 Execute word2docbook.bat wordfile, without extension.
-The process will take the document from the input folder and it will store the xml docbook output in the output folder.
+The process will take the document from the input folder and store it in xml docbook format in the output folder.
 
 In the template folder there is a file with the conversion instructions, template.xml.
 
