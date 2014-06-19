@@ -63,7 +63,19 @@ In the template folder there is a file with the conversion instructions: templat
 ```
 In this file you can find the rules conversions, for example if the docx document contains a heading 1 style, this is transformed to chapter. Tables, lists and inline elements (bold, underline, sub, sup, links, ...) are autodetected.
 
-Its important to mark, in the docx, the title, headin1, heading2,..., because this marks are used to generate de XML docbook structure.
+Its important to mark, in the docx, the title, heading 1, heading 2,..., because this marks are used to generate de XML docbook structure, you can use the template/template.xml template sample.
+
+The main XSL file is: word2docbook.xsl and you can change the input parameters:
+
+path.unzip.word = temporal folder
+template.estils = template path
+
+```xml
+<xsl:param name="path.unzip.word" select="'C:/word2docbook/tmp'"/>
+<xsl:param name="template.estils" select="'C:/word2docbook/templates/template.xml'"/>
+<xsl:param name="codi"/>
+<xsl:param name="titol"/>
+```
 
 ##Demo
 
