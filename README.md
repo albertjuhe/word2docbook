@@ -1,11 +1,41 @@
 word2docbook
 ============
 
-Convert Word documents (docx) to XML docbook, usign XSLT 2.0 with [saxonhe9-2-1-5j](http://saxon.sourceforge.net/) and XMLPipeline with [calumet](https://community.emc.com/docs/DOC-4242).
+Convert Word documents (docx) to XML docbook 5.0, usign XSLT 2.0 with [saxonhe9-2-1-5j](http://saxon.sourceforge.net/) and XMLPipeline with [calumet](https://community.emc.com/docs/DOC-4242).
 
 This converter makes the transformation based on a file which makes a relationship between word styles and docbook tags.
 
-##Installation
+The output will has this form:
+```xml
+<book xmlns="http://docbook.org/ns/docbook" version="5.0">
+    <info>
+    </info>
+     <chapter xml:id="m0">
+        <info></info>
+     </chapter>
+     <chapter xml:id="m1">
+        <info></info>
+     </chapter>
+     <chapter xml:id="m2">
+        <info></info>
+     </chapter>
+     ...
+</book>
+```
+
+Elements supported:
+ table
+ listitem
+ emphasys
+ links
+ sect1..5
+ chapter
+ book
+ mediaobject
+ important
+ blockquote
+
+ ##Installation
 
 Download de code.
 Install java 1.6.
@@ -13,18 +43,18 @@ Install java 1.6.
 ##Usage
 
 Execute word2docbook.bat wordfile, without extension.
-The process will take the document from the input folder and store it in xml docbook format in the output folder.
+The process will take the document from the input folder and store it in the output folder in xml docbook format.
 
 In the template folder there is a file with the conversion instructions: template.xml.
 
 ```xml
 <t:template xmlns:t="http://www.omaonk.com/schema">
-   <t:style word="heading 1" tag="chapter"/>
-   <t:style word="heading 2" tag="sect1"/>
-   <t:style word="heading 3" tag="sect2"/>
+   <t:style word="heading 1" tag="chapter"/> <!-- title word style -->
+   <t:style word="heading 2" tag="sect1"/> <!-- title 1 -->
+   <t:style word="heading 3" tag="sect2"/> <!-- title 2 -->
    <t:style word="List Paragraph" tag="listitem"/>
-   <t:style word="heading 4" tag="sect3"/>
-   <t:style word="heading 5" tag="sect4"/>
+   <t:style word="heading 4" tag="sect3"/> <!-- title 3 -->
+   <t:style word="heading 5" tag="sect4"/> <!-- title 4 -->
    <t:style word="heading 6" tag="example"/>
    <t:style word="Quote" tag="blockquote"/>
    <t:style word="Intense Quote" tag="important"/>
