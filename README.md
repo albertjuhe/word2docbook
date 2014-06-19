@@ -15,7 +15,7 @@ Install java 1.6.
 Execute word2docbook.bat wordfile, without extension.
 The process will take the document from the input folder and store it in xml docbook format in the output folder.
 
-In the template folder there is a file with the conversion instructions, template.xml.
+In the template folder there is a file with the conversion instructions: template.xml.
 
 ```xml
 <t:template xmlns:t="http://www.omaonk.com/schema">
@@ -31,7 +31,9 @@ In the template folder there is a file with the conversion instructions, templat
    <t:style word="Title" tag="title"/>
 </t:template>
 ```
-In this file you can find the rules conversions, for example if the docx document contains a heading 1 style, this is transformed to chapter. Tables, lists and inline elements (bold, underline, sub, sup, ...) are autodetected.
+In this file you can find the rules conversions, for example if the docx document contains a heading 1 style, this is transformed to chapter. Tables, lists and inline elements (bold, underline, sub, sup, links, ...) are autodetected.
+
+Its important to mark, in the docx, the title, headin1, heading2,..., because this marks are used to generate de XML docbook structure.
 
 ##Demo
 
