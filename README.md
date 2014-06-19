@@ -24,7 +24,7 @@ The output will has this form:
 ```
 
 Elements supported:
- table
+ table in cals mode
  listitem
  emphasys
  links
