@@ -26,7 +26,7 @@ The output will has this form:
 Elements supported:
  table in cals mode
  listitem
- emphasys
+ emphasis
  links
  sect1..5
  chapter
@@ -34,6 +34,9 @@ Elements supported:
  mediaobject
  important
  blockquote
+ mathml
+ info
+ title
 
  ##Installation
 
