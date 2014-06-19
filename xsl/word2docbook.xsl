@@ -18,7 +18,8 @@
     <xsl:include href="match/links.xsl"/>
     <xsl:include href="match/info.xsl"/>
     <xsl:include href="match/media.xsl"/>
-
+    <xsl:include href="OMML2MML.XSL"/>
+ 
     <xsl:param name="path.unzip.word" select="'C:/word2docbook_github/word2docbook/tmp'"/>
     <xsl:param name="template.estils" select="'C:/word2docbook_github/word2docbook/templates/template.xml'"/>
     <xsl:param name="codi"/>
@@ -47,7 +48,7 @@
     </xsl:template>
 
     <xsl:template match="w:body">
-        <!-- Mirem d'extreure el titol -->
+        <!-- Extraxt document title -->
         <xsl:variable name="document-metadades" select="concat($path.unzip.word,'/docProps/core.xml')"></xsl:variable>
         <xsl:variable name="document-title">
             <xsl:if test="doc-available($document-metadades)">

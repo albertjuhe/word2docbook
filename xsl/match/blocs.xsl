@@ -156,5 +156,11 @@
             </xsl:for-each>
         </xsl:if>
     </xsl:template>
+    
+    <xsl:template match="m:oMathPara">
+        <informalequation>
+            <xsl:apply-templates select="*" mode="mathml"/>
+        </informalequation>
+    </xsl:template>
 
 </xsl:stylesheet>
