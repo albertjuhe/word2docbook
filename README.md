@@ -105,3 +105,5 @@ Steps to mark word documents:
 1)In the input folder there is a test.docx document, this document is a simple document with sections, paragraphs, tables, bold, italic, images, equations and list items.
 Execute: word2docbook.bat test
 The output will be in the output folder in XML docbook format and with the document images.
+
+2)Sample 2: test_2.docx word with preface, author and personalblurb
