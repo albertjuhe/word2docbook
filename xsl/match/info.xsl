@@ -42,10 +42,8 @@
             </legalnotice>
             <biblioid class="isbn"><xsl:value-of select="$codi"/></biblioid>
             <biblioid class="other" otherclass="dl"><xsl:value-of select="$codi"/></biblioid>
-            <biblioid class="other" otherclass="UOCXML"><xsl:value-of select="$codi"/></biblioid>
-            <bibliorelation class="other" otherclass="UOCWEB" type="hasformat"><xsl:value-of select="$codi"/></bibliorelation>
-            <bibliorelation class="other" otherclass="UOCPDF" type="hasformat"><xsl:value-of select="$codi"/></bibliorelation>
-        </info>
+            <biblioid class="other" otherclass="XML"><xsl:value-of select="$codi"/></biblioid>
+         </info>
     </xsl:template>
 
 

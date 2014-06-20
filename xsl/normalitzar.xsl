@@ -33,7 +33,7 @@
 			<xsl:otherwise/>
 		</xsl:choose>
 	</xsl:template>
-
+<!--
 	<xsl:template match="preface">
 		<preface>
 			<title>preliminars</title>
@@ -44,9 +44,8 @@
 				select="sect1[title='Bibliografia' or normalize-space(title)='Bibliografía']"/>
 		</preface>
 	</xsl:template>
-
+-->
 	<xsl:template match="chapter">
-
 		<xsl:copy>
 			<xsl:copy-of select="@*"/>
 			<xsl:attribute name="xml:id">

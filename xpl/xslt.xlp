@@ -9,7 +9,7 @@
             <p:pipe step="word2docbook" port="parameters"/>
         </p:input>
     </p:xslt>
-   
+
     <p:xslt name="stepLists">
         <p:input port="source">
             <p:pipe port="result" step="stepWordXml"/>
@@ -33,7 +33,7 @@
             <p:empty/>
         </p:input>
     </p:xslt>
-
+  
     <p:xslt name="stepStructureDocbook">
         <p:input port="source">
             <p:pipe port="result" step="stepClean"/>

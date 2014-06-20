@@ -42,6 +42,6 @@
     </xsl:template>
     
     <xsl:template match="w:bookmarkStart">
-        <anchor xml:id="{@w:name}"/>
+    <!--    <anchor xml:id="{@w:name}"/> -->
     </xsl:template>
 </xsl:stylesheet>

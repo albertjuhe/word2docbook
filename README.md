@@ -37,6 +37,10 @@ Elements supported:
  mathml
  info
  title
+ preface
+ authorgroup
+ author
+ personblurb
 
  ##Installation
 
@@ -62,6 +66,8 @@ In the template folder there is a file with the conversion instructions: templat
    <t:style word="Quote" tag="blockquote"/>
    <t:style word="Intense Quote" tag="important"/>
    <t:style word="Title" tag="title"/>
+   <t:style word="Author" tag="author"/>
+   <t:style word="personblurb" tag="personblurb"/>
 </t:template>
 ```
 In this file you can find the rules conversions, for example if the docx document contains a heading 1 style, this is transformed to chapter. Tables, lists and inline elements (bold, underline, sub, sup, links, ...) are autodetected.
@@ -85,7 +91,9 @@ Steps to mark word documents:
 1) Open MicrosoftOficce Word and load a document.
 1) Mark the document title, you have to apply the style title (in the microsoft office editor) to the document title.
 2) Create sections:
-  Use title1, title2, title3, title4,... Word style to create the document structure, each of this styles will be transformed to sect1, sect2, sect3,...
+  - Use title1, title2, title3, title4,... Word style to create the document structure, each of this styles will be transformed to sect1, sect2, sect3,...
+  - Preface section is a title1 Style with the 'Preface' literal.
+
 3) You can modify the template.xml file and apply diferent style that will be tansformed to docbook tags. For example (default template):
     - Quote will be converted to blockquote
     - Intense Quote will be converted to important.

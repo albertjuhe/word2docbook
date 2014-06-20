@@ -13,11 +13,11 @@
    <t:style word="heading 4" tag="sect3"/>
    <t:style word="heading 5" tag="sect4"/>
    <t:style word="heading 6" tag="example"/>
-   <t:style word="autor" tag="autor"/>
+   <t:style word="Author" tag="author"/>
    <t:style word="Quote" tag="blockquote"/>
    <t:style word="Intense Quote" tag="important"/>
    <t:style word="Title" tag="title"/>
-   <t:style word="curriculum" tag="personblurb"/>
+   <t:style word="personblurb" tag="personblurb"/>
    <t:style word="footnote" tag="footnote"/>
    
 </t:template>

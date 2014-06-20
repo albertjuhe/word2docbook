@@ -27,7 +27,7 @@
 
 	<xsl:template match="info/authorgroup">
 		<xsl:copy>
-			<xsl:for-each select="//autor">
+			<xsl:for-each select="//author">
 				<author>
 					<personname>
 						<xsl:value-of select="."/>
@@ -45,7 +45,7 @@
 		</xsl:copy>
 	</xsl:template>
 
-	<xsl:template match="autor | personblurb">
+	<xsl:template match="author | personblurb">
 	</xsl:template>
 
 	<xsl:template match="para">
