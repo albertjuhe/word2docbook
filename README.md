@@ -79,9 +79,21 @@ template.estils = template path
 <xsl:param name="codi"/>
 <xsl:param name="titol"/>
 ```
+##Marcage
+
+Steps to mark word documents:
+1) Open MicrosoftOficce Word and load a document.
+1) Mark the document title, you have to apply the style title (in the microsoft office editor) to the document title.
+2) Create sections:
+  Use title1, title2, title3, title4,... Word style to create the document structure, each of this styles will be transformed to sect1, sect2, sect3,...
+3) You can modify the template.xml file and apply diferent style that will be tansformed to docbook tags. For example (default template):
+    - Quote will be converted to blockquote
+    - Intense Quote will be converted to important.
+4) Save as docx.
+
 
 ##Demo
 
-In the input folder there is a test.docx document.
+1)In the input folder there is a test.docx document, this document is a simple document with sections, paragraphs, tables, bold, italic, images, equations and list items.
 Execute: word2docbook.bat test
 The output will be in the output folder in XML docbook format and with the document images.
