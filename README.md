@@ -41,8 +41,9 @@ Elements supported:
  authorgroup
  author
  personblurb
+ footnotes
 
- ##Installation
+##Installation
 
 Download de code.
 Install java 1.6.
@@ -106,4 +107,4 @@ Steps to mark word documents:
 Execute: word2docbook.bat test
 The output will be in the output folder in XML docbook format and with the document images.
 
-2)Sample 2: test_2.docx word with preface, author and personalblurb
+2)Sample 2: test_2.docx word with preface, author, personalblurb and footnotes.
