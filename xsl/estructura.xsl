@@ -140,7 +140,7 @@
 
 	</xsl:template>
 
-	<xsl:template match="info | content/info"/>
+	<xsl:template match="info | content/info | footnotes"/>
 
 	<xsl:template match="content" mode="copyall">
 		<xsl:apply-templates mode="copyall"/>
