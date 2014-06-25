@@ -6,7 +6,7 @@
 	xpath-default-namespace="http://docbook.org/ns/docbook" exclude-result-prefixes="#all">
 
 	<!--
-		epub to
+		WORD to
 		docbook 
 		
 	-->

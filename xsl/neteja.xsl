@@ -12,7 +12,7 @@
 	-->
 
 	<xsl:output indent="yes" omit-xml-declaration="no" standalone="yes" media-type="xml"/>
-
+	<xsl:key name="footnotes" match="footnote" use="@xml:id"/>
 
 	<xsl:template match="book">
 		<xsl:copy>
@@ -23,6 +23,14 @@
 
 	<xsl:template match="info/title">
 		<xsl:apply-templates select="//metadata/title"/>
+	</xsl:template>
+
+	<!-- footnotes -->
+	<xsl:template match="footnoteref">
+		<xsl:copy-of select="."/>
+		<xsl:for-each select="key('footnotes',@linkend)">
+			<xsl:copy-of select="."/>
+		</xsl:for-each>
 	</xsl:template>
 
 	<xsl:template match="info/authorgroup">
@@ -37,7 +45,7 @@
 							<para>
 								<xsl:value-of select="following-sibling::*[1][self::personblurb]"/>
 							</para>
-							
+
 						</personblurb>
 					</xsl:if>
 				</author>
@@ -45,8 +53,7 @@
 		</xsl:copy>
 	</xsl:template>
 
-	<xsl:template match="author | personblurb">
-	</xsl:template>
+	<xsl:template match="author | personblurb"> </xsl:template>
 
 	<xsl:template match="para">
 		<xsl:choose>

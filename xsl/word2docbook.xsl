@@ -69,6 +69,17 @@
         <content>
             <xsl:apply-templates/>
         </content>
+        <footnotes>
+            <!-- Extraxt document title -->
+            <xsl:variable name="document-footnotes" select="concat($path.unzip.word,'/word/footnotes.xml')"></xsl:variable>
+            <xsl:if test="doc-available($document-footnotes)">
+                <xsl:for-each select="document($document-footnotes)//w:footnote">
+                    <footnote xml:id="ft{@w:id}">
+                        <xsl:apply-templates/>
+                    </footnote>
+                </xsl:for-each>
+            </xsl:if>
+        </footnotes>
     </xsl:template>
 
     <xsl:template match="*"/>

@@ -20,7 +20,7 @@
     <xsl:param name="UNDERLINE" select="'underline#'"/>
 
     <!-- 
-        w:r es com un span
+        w:r similar to span
         si té un estil propi es marca amb w:rStyle
     -->
     <xsl:template match="w:r">
@@ -89,6 +89,11 @@
                 <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:template>
+
+    <!-- footnote references, the footnotes text are in the footnotes.xml -->
+    <xsl:template match="w:footnoteReference">
+        <footnoteref linkend='ft{@w:id}'/>
     </xsl:template>
 
     <xsl:template match="w:br">

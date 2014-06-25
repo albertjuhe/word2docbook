@@ -21,7 +21,7 @@
             <p:empty/>
         </p:input>
     </p:xslt>   
-    
+   
     <p:xslt name="stepClean">
         <p:input port="source">
             <p:pipe port="result" step="stepLists"/>
