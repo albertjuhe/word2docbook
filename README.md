@@ -92,7 +92,7 @@ Steps to mark word documents:
 1) Open MicrosoftOficce Word and load a document.
 1) Mark the document title, you have to apply the style title (in the microsoft office editor) to the document title.
 2) Create sections:
-  - Use title1, title2, title3, title4,... Word style to create the document structure, each of this styles will be transformed to sect1, sect2, sect3,...
+  - Use title1, title2, title3, title4,... Word style to create the document structure, each of this styles will be transformed to chapter, sect1, sect2, sect3,...
   - Preface section is a title1 Style with the 'Preface' literal.
 
 3) You can modify the template.xml file and apply diferent style that will be tansformed to docbook tags. For example (default template):
