@@ -86,7 +86,7 @@ template.estils = template path
 <xsl:param name="codi"/>
 <xsl:param name="titol"/>
 ```
-##Marcage
+##Styling word document 
 
 Steps to mark word documents:
 1) Open MicrosoftOficce Word and load a document.
